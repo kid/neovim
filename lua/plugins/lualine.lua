@@ -1,0 +1,6 @@
+return {
+  {
+    "lualine.nvim",
+    opts = {},
+  }
+}
