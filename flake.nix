@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
     flake-parts.url = "github:hercules-ci/flake-parts";
 
     mnw.url = "github:Gerg-L/mnw";
@@ -9,6 +10,9 @@
 
     npins.url = "github:andir/npins";
     npins.flake = false;
+
+    blink-cmp.url = "github:saghen/blink.cmp/v1.8.0";
+    blink-pairs.url = "github:saghen/blink.pairs/v0.4.1";
   };
 
   outputs =
@@ -20,6 +24,7 @@
         {
           pkgs,
           self',
+          inputs',
           ...
         }:
         let
@@ -29,7 +34,7 @@
           packages = {
             default = self'.packages.neovim;
 
-            neovim = mnw.lib.wrap { inherit pkgs inputs; } ./config.nix;
+            neovim = mnw.lib.wrap { inherit pkgs inputs inputs'; } ./config.nix;
 
             dev = self'.packages.default.devMode;
             inherit (self'.packages.default) configDir;
@@ -38,17 +43,25 @@
           };
 
           devShells.default = pkgs.mkShellNoCC {
-            packages = [
-              pkgs.opencode
-              self'.packages.dev
-              self'.packages.npins
-              (pkgs.writeShellScriptBin "start" ''
-                npins --lock-file ./npins/start.json "$@"
-              '')
-              (pkgs.writeShellScriptBin "opt" ''
-                npins --lock-file ./npins/opt.json "$@"
-              '')
-            ];
+            packages =
+              with pkgs;
+              [
+                opencode
+                stylua
+                deadnix
+                statix
+              ]
+              ++ [
+                pkgs.opencode
+                self'.packages.dev
+                self'.packages.npins
+                (pkgs.writeShellScriptBin "start" ''
+                  npins --lock-file ./npins/start.json "$@"
+                '')
+                (pkgs.writeShellScriptBin "opt" ''
+                  npins --lock-file ./npins/opt.json "$@"
+                '')
+              ];
           };
         };
     });

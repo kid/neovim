@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  inputs',
   ...
 }:
 let
@@ -34,16 +35,19 @@ in
 
     start = pkgs.vimPlugins.nvim-treesitter.withAllGrammars.dependencies;
     startAttrs = npinsToPlugins ./npins/start.json;
-    opt = with pkgs.vimPlugins; [
-      blink-cmp
-    ];
-    optAttrs = npinsToPlugins ./npins/opt.json;
+
+    optAttrs = {
+      "blink.cmp" = inputs'.blink-cmp.packages.default;
+      "blink.pairs" = inputs'.blink-pairs.packages.default;
+    }
+    // npinsToPlugins ./npins/opt.json;
   };
 
   extraBinPath = with pkgs; [
     deadnix
     statix
     nil
+    nixd
 
     lua-language-server
     stylua

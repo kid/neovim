@@ -1,29 +1,29 @@
 return {
-	{
-		"snacks.nvim",
-		priority = 1000,
-		lazy = false,
-		after = function()
-			require("snacks").setup(
-				--- @type snacks.Config
-				{
-					notifier = { enabled = true },
-					bigfile = { enabled = true },
-					indent = { enabled = true },
-					input = { enabled = true },
-					statuscolumn = { enabled = true },
-					picker = {
-						enabled = true,
-						layout = {
-							cycle = true,
-							preset = function()
-								return vim.o.columns >= 120 and "ivy" or "ivy_split"
-							end,
-						},
-					},
-				}
-			)
-		end,
+  {
+    "snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    after = function()
+      require("snacks").setup(
+        --- @type snacks.Config
+        {
+          bigfile = { enabled = true },
+          terminal = { enabled = true },
+          indent = { enabled = true },
+          input = { enabled = true },
+          statuscolumn = { enabled = true },
+          picker = {
+            enabled = true,
+            layout = {
+              cycle = true,
+              preset = function()
+                return vim.o.columns >= 120 and "ivy" or "ivy_split"
+              end,
+            },
+          },
+        }
+      )
+    end,
     -- stylua: ignore start
     keys = {
       -- Top Pickers & Explorer
@@ -91,6 +91,6 @@ return {
       { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
       { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
     },
-		-- stylua: ignore stop
-	},
+    -- stylua: ignore stop
+  },
 }

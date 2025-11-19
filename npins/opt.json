@@ -84,6 +84,22 @@
       "url": "https://github.com/nvim-lualine/lualine.nvim/archive/3946f0122255bc377d14a59b27b609fb3ab25768.tar.gz",
       "hash": "sha256-hdrAdG3hC2sAevQ6a9xizqPgEgnNKxuc5rBYn0pKM1c="
     },
+    "markview.nvim": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "OXY2DEV",
+        "repo": "markview.nvim"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v27.0.0",
+      "revision": "f612352c231272995bdf1b3ebbdfa37848793dfe",
+      "url": "https://api.github.com/repos/OXY2DEV/markview.nvim/tarball/refs/tags/v27.0.0",
+      "hash": "sha256-xZEP7zNeFOowwc/Wzkm5OvZzI3cR+PosuvQcDt9zQAY="
+    },
     "mini.icons": {
       "type": "GitRelease",
       "repository": {
@@ -148,6 +164,22 @@
       "url": "https://api.github.com/repos/neovim/nvim-lspconfig/tarball/refs/tags/v2.5.0",
       "hash": "sha256-BrY4l2irKsAmxDNPhW9eosOwsVdZjULyY6AOkqTAU4E="
     },
+    "nvim-surround": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "kylechui",
+        "repo": "nvim-surround"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v3.1.7",
+      "revision": "fcfa7e02323d57bfacc3a141f8a74498e1522064",
+      "url": "https://api.github.com/repos/kylechui/nvim-surround/tarball/refs/tags/v3.1.7",
+      "hash": "sha256-EfANqB0BLbhfnM45MwzHV76/JtGyZtLvMC+06KPu2Uo="
+    },
     "nvim-web-devicons": {
       "type": "GitRelease",
       "repository": {
@@ -208,6 +240,22 @@
       "revision": "a4e46becca45eb65c73a388634b1ce8aad629ae0",
       "url": "https://api.github.com/repos/folke/snacks.nvim/tarball/refs/tags/v2.30.0",
       "hash": "sha256-5m65Gvc6DTE9v7noOfm0+iQjDrqnrXYYV9QPnmr1JGY="
+    },
+    "which-key.nvim": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "folke",
+        "repo": "which-key.nvim"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v3.17.0",
+      "revision": "fcbf4eea17cb299c02557d576f0d568878e354a4",
+      "url": "https://api.github.com/repos/folke/which-key.nvim/tarball/refs/tags/v3.17.0",
+      "hash": "sha256-kYpiw2Syu54B/nNVqTZeUHJIPNzAv3JpFaMWR9Ai3p4="
     }
   },
   "version": 7

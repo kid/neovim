@@ -9,9 +9,8 @@ vim.o.number = true
 vim.o.relativenumber = true
 
 vim.o.cmdheight = 0
--- vim.o.completeopt = "menu,menuone,noselect,preview" -- omnicomplete options for popup menu
+vim.o.laststatus = 3
 vim.o.pumheight = 10 -- max height of completion menu
--- vim.o.winborder = "rounded" -- rounded border
 vim.o.showmode = false -- disable showing mode below statusline
 
 vim.o.cursorline = true
@@ -34,4 +33,8 @@ vim.o.splitright = true
 vim.o.wrap = false
 vim.o.breakindent = true
 
-vim.diagnostic.config({ virtual_text = true })
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
