@@ -7,8 +7,11 @@ return {
       require("gruvbox").setup({
         overrides = {
           CursorLineNr = { bg = "none" },
-          -- CursorLineSign = { bg = "none" },
-          -- SignColumn = { bg = "none" },
+          CursorLineSign = { bg = "none" },
+          DiagnosticSignError = { bg = "none" },
+          DiagnosticSignWarn = { bg = "none" },
+          DiagnosticSignInfo = { bg = "none" },
+          DiagnosticSignHint = { bg = "none" },
         },
       })
       vim.cmd("colorscheme gruvbox")

@@ -14,16 +14,17 @@ return {
             [vim.diagnostic.severity.INFO] = "",
             [vim.diagnostic.severity.HINT] = "",
           },
-          linehl = {
-            -- [vim.diagnostic.severity.ERROR] = "ErrorMsg",
-          },
+          -- linehl = {
+          --   [vim.diagnostic.severity.ERROR] = "ErrorMsg",
+          -- },
           -- numhl = {
           --   [vim.diagnostic.severity.WARN] = "WarningMsg",
+          --   [vim.diagnostic.severity.ERROR] = "ErrorMsg",
           -- },
         },
       })
 
-      vim.lsp.enable({ "lua_ls", "nil_ls", "nixd", "statix" })
+      vim.lsp.enable({ "lua_ls", "nil_ls", "nixd", "statix", "gopls" })
 
       -- vim.api.nvim_create_autocmd("LspProgress", {
       -- 	---@param ev {data: {client_id: integer, params: lsp.ProgressParams}}

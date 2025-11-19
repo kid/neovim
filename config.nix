@@ -44,6 +44,8 @@ in
   };
 
   extraBinPath = with pkgs; [
+    sqlite
+
     deadnix
     statix
     nil
@@ -52,6 +54,6 @@ in
     lua-language-server
     stylua
 
-    sqlite
+    gopls
   ];
 }

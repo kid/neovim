@@ -52,7 +52,6 @@
                 statix
               ]
               ++ [
-                pkgs.opencode
                 self'.packages.dev
                 self'.packages.npins
                 (pkgs.writeShellScriptBin "start" ''
