@@ -1,6 +1,8 @@
 -- TODO: add colorful.menu
 -- TODO: implement copilot next edit suggestions
 -- FIXME: kind icon alignment
+
+--- @type lz.n.PluginSpec[]
 return {
   {
     "lspkind.nvim",
