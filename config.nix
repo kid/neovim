@@ -55,5 +55,7 @@ in
     stylua
 
     gopls
+
+    copilot-language-server
   ];
 }

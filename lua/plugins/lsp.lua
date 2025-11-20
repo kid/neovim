@@ -4,8 +4,8 @@ return {
     after = function()
       vim.diagnostic.config({
         -- update_in_insert = true,
-        virtual_text = false,
-        virtual_lines = { enable = true, current_line = true },
+        virtual_text = true,
+        -- virtual_lines = { enable = true, current_line = true },
         underline = true,
         signs = {
           text = {
@@ -24,7 +24,7 @@ return {
         },
       })
 
-      vim.lsp.enable({ "lua_ls", "nil_ls", "nixd", "statix", "gopls" })
+      vim.lsp.enable({ "lua_ls", "nil_ls", "nixd", "statix", "gopls", "copilot" })
 
       -- vim.api.nvim_create_autocmd("LspProgress", {
       -- 	---@param ev {data: {client_id: integer, params: lsp.ProgressParams}}

@@ -22,7 +22,9 @@
 
       perSystem =
         {
+          lib,
           pkgs,
+          system,
           self',
           inputs',
           ...
@@ -31,6 +33,15 @@
           inherit (inputs) mnw npins;
         in
         {
+          _module.args.pkgs = import inputs.nixpkgs {
+            inherit system;
+            config.allowUnfreePredicate =
+              pkg:
+              builtins.elem (lib.getName pkg) [
+                "copilot-language-server"
+              ];
+          };
+
           packages = {
             default = self'.packages.neovim;
 

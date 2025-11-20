@@ -6,6 +6,11 @@ return {
       "blink.cmp",
       "treesitter.nvim",
     },
-    opts = {},
+    opts = {
+      preview = {
+        filetypes = { "markdown", "codecompanion" },
+        ignore_buftypes = {},
+      },
+    },
   },
 }
