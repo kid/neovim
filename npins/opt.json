@@ -1,5 +1,21 @@
 {
   "pins": {
+    "codecompanion.nvim": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "olimorris",
+        "repo": "codecompanion.nvim"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v17.32.0",
+      "revision": "68fcda022fce25ee380e267d4b0fe98113b3957d",
+      "url": "https://api.github.com/repos/olimorris/codecompanion.nvim/tarball/refs/tags/v17.32.0",
+      "hash": "sha256-J33VhN7XVo/DFXw+zIzeewMqV16rmt5ChUtLHtdlexE="
+    },
     "conform.nvim": {
       "type": "Git",
       "repository": {
@@ -12,6 +28,19 @@
       "revision": "1bf8b5b9caee51507aa51eaed3da5b0f2595c6b9",
       "url": "https://github.com/stevearc/conform.nvim/archive/1bf8b5b9caee51507aa51eaed3da5b0f2595c6b9.tar.gz",
       "hash": "sha256-CpoqqC6sam0LV9D2mYyD4FVpEMS2yK+RKwNyq9aR8W8="
+    },
+    "copilot.lua": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "zbirenbaum",
+        "repo": "copilot.lua"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "4383e05a47493d7ff77b058c0548129eb38ec7fb",
+      "url": "https://github.com/zbirenbaum/copilot.lua/archive/4383e05a47493d7ff77b058c0548129eb38ec7fb.tar.gz",
+      "hash": "sha256-NMIXOb/20aEmXvPgSDPzVuRIV+OUnJyfXVaVEuVAaTM="
     },
     "flash.nvim": {
       "type": "GitRelease",
