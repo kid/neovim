@@ -8,6 +8,9 @@
 
     systems.url = "github:nix-systems/default";
 
+    treefmt-nix.url = "github:numtide/treefmt-nix";
+    treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
+
     npins.url = "github:andir/npins";
     npins.flake = false;
 
@@ -18,6 +21,10 @@
   outputs =
     inputs@{ flake-parts, systems, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } (_: {
+      imports = [
+        inputs.treefmt-nix.flakeModule
+      ];
+
       systems = import systems;
 
       perSystem =
@@ -40,6 +47,14 @@
               builtins.elem (lib.getName pkg) [
                 "copilot-language-server"
               ];
+          };
+
+          treefmt = {
+            flakeCheck = true;
+            programs = {
+              nixfmt.enable = true;
+              stylua.enable = true;
+            };
           };
 
           packages = {
