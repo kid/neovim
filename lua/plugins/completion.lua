@@ -2,7 +2,7 @@
 -- TODO: implement copilot next edit suggestions
 -- FIXME: kind icon alignment
 
---- @type lz.n.PluginSpec[]
+--- @type lze.PluginSpec[]
 return {
   {
     "lspkind.nvim",

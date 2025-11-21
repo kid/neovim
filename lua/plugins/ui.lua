@@ -1,4 +1,4 @@
---- @type lz.n.PluginSpec[]
+--- @type lze.PluginSpec[]
 return {
   { "mini.icons" },
   { "nui.nvim" },
@@ -57,13 +57,16 @@ return {
     "which-key.nvim",
     event = "DeferredUIEnter",
     dependencies = { "mini.icons" },
-    opts = {},
+    -- after = function ()
+    --
+    -- end
   },
   {
     "noice.nvim",
     dependencies = { "nui.nvim" },
     event = "DeferredUIEnter",
     after = function()
+      -- TODO: replace lsp progress with fidget later
       require("noice").setup({
         lsp = {
           override = {

@@ -1,4 +1,4 @@
---- @type lz.n.PluginSpec[]
+--- @type lze.PluginSpec[]
 return {
   {
     "markview.nvim",
@@ -7,11 +7,13 @@ return {
       "blink.cmp",
       "treesitter.nvim",
     },
-    opts = {
-      preview = {
-        filetypes = { "markdown", "codecompanion" },
-        ignore_buftypes = {},
-      },
-    },
+    after = function()
+      require("markview").setup({
+        preview = {
+          filetypes = { "markdown", "codecompanion" },
+          ignore_buftypes = {},
+        },
+      })
+    end,
   },
 }

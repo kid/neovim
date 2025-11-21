@@ -1,20 +1,20 @@
 {
   "pins": {
-    "lz.n": {
+    "lze": {
       "type": "GitRelease",
       "repository": {
         "type": "GitHub",
-        "owner": "lumen-oss",
-        "repo": "lz.n"
+        "owner": "BirdeeHub",
+        "repo": "lze"
       },
       "pre_releases": false,
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v2.12.2",
-      "revision": "74194977d829b0d2de9a1514060114b568f6fdba",
-      "url": "https://api.github.com/repos/lumen-oss/lz.n/tarball/refs/tags/v2.12.2",
-      "hash": "sha256-YP8jlE71i/MuF11jsJUNIgojfKpekoSmMlWkKZj+GjQ="
+      "version": "v0.11.7",
+      "revision": "ee1ed45e97ebcf3ab3de72d4047510530fc6a775",
+      "url": "https://api.github.com/repos/BirdeeHub/lze/tarball/refs/tags/v0.11.7",
+      "hash": "sha256-1shG6hcrUGfcsf09Jt/nPaUoBzBmlE73s+j1tOK/KH8="
     },
     "plenary.nvim": {
       "type": "Git",

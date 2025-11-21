@@ -1,4 +1,4 @@
---- @type lz.n.PluginSpec[]
+--- @type lze.PluginSpec[]
 return {
   {
     "nvim-surround",

@@ -1,4 +1,4 @@
---- @type lz.n.PluginSpec[]
+--- @type lze.PluginSpec[]
 return {
   {
     "snacks.nvim",
@@ -25,6 +25,9 @@ return {
         }
       )
     end,
+    key_groups = {
+      { "<leader>f", group = "Find" },
+    },
     -- stylua: ignore start
     keys = {
       -- Top Pickers & Explorer

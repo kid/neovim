@@ -1,4 +1,4 @@
---- @type lz.n.PluginSpec[]
+--- @type lze.PluginSpec[]
 return {
   {
     "nvim-lspconfig",
@@ -27,20 +27,22 @@ return {
 
       vim.lsp.enable({ "lua_ls", "nil_ls", "nixd", "statix", "gopls", "copilot" })
 
-      -- vim.api.nvim_create_autocmd("LspProgress", {
-      -- 	---@param ev {data: {client_id: integer, params: lsp.ProgressParams}}
-      -- 	callback = function(ev)
-      -- 		local spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" }
-      -- 		vim.notify(vim.lsp.status(), "info", {
-      -- 			id = "lsp_progress",
-      -- 			title = "LSP Progress",
-      -- 			opts = function(notif)
-      -- 				notif.icon = ev.data.params.value.kind == "end" and " "
-      -- 					or spinner[math.floor(vim.uv.hrtime() / (1e6 * 80)) % #spinner + 1]
-      -- 			end,
-      -- 		})
-      -- 	end,
-      -- })
+      vim.api.nvim_create_autocmd("LspAttach", {
+        group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+        callback = function(ev)
+          local opts = { buffer = ev.buf }
+          vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+          vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, opts)
+          vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+          vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
+          vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts)
+          vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+          vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, opts)
+        end,
+      })
     end,
+    key_groups = {
+      { "<leader>l", group = "+LSP" },
+    },
   },
 }

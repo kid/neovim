@@ -1,4 +1,4 @@
---- @type lz.n.PluginSpec[]
+--- @type lze.PluginSpec[]
 return {
   {
     "codecompanion.nvim",
@@ -6,6 +6,9 @@ return {
       "plenary.nvim",
       "nvim-treesitter",
     },
+    before = function()
+      require("lze").trigger_load("markview.nvim")
+    end,
     after = function()
       require("codecompanion").setup({})
     end,
