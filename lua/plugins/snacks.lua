@@ -10,7 +10,10 @@ return {
         {
           bigfile = { enabled = true },
           terminal = { enabled = true },
-          indent = { enabled = true },
+          indent = {
+            enabled = true,
+            animate = { enabled = false },
+          },
           input = { enabled = true },
           statuscolumn = { enabled = true },
           picker = {

@@ -39,4 +39,11 @@ return {
       { "<leader>l", group = "+LSP" },
     },
   },
+  {
+    "trouble.nvim",
+    cmd = { "Trouble" },
+    after = function()
+      require("trouble").setup({})
+    end,
+  },
 }

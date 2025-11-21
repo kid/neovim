@@ -100,6 +100,19 @@
       "url": "https://api.github.com/repos/folke/flash.nvim/tarball/refs/tags/v2.1.0",
       "hash": "sha256-Qh9ty28xtRS3qXxE/ugx9FqAKrdeFGEf7W6yEORnZV8="
     },
+    "gitsigns.nvim": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "lewis6991",
+        "repo": "gitsigns.nvim"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "cdafc320f03f2572c40ab93a4eecb733d4016d07",
+      "url": "https://github.com/lewis6991/gitsigns.nvim/archive/cdafc320f03f2572c40ab93a4eecb733d4016d07.tar.gz",
+      "hash": "sha256-w2/osNJwbtmUxxQIXBsyqMYrvyNUaVzXrUNGYqGmzi4="
+    },
     "gruvbox.nvim": {
       "type": "Git",
       "repository": {
@@ -324,6 +337,19 @@
       "revision": "a4e46becca45eb65c73a388634b1ce8aad629ae0",
       "url": "https://api.github.com/repos/folke/snacks.nvim/tarball/refs/tags/v2.30.0",
       "hash": "sha256-5m65Gvc6DTE9v7noOfm0+iQjDrqnrXYYV9QPnmr1JGY="
+    },
+    "trouble.nvim": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "folke",
+        "repo": "trouble.nvim"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "bd67efe408d4816e25e8491cc5ad4088e708a69a",
+      "url": "https://github.com/folke/trouble.nvim/archive/bd67efe408d4816e25e8491cc5ad4088e708a69a.tar.gz",
+      "hash": "sha256-6U/KWjvRMxWIxcsI2xNU/ltfgkaFG4E3BdzC7brK/DI="
     },
     "which-key.nvim": {
       "type": "GitRelease",

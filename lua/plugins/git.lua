@@ -43,4 +43,13 @@ return {
       { "<leader>gg", "<cmd>Neogit<cr>", desc = "Show Neogit UI" },
     },
   },
+  {
+    "gitsigns.nvim",
+    before = function()
+      LZE.trigger_load("trouble.nvim")
+    end,
+    after = function()
+      require("gitsigns").setup()
+    end,
+  },
 }
