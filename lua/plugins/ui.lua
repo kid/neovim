@@ -57,9 +57,6 @@ return {
     "which-key.nvim",
     event = "DeferredUIEnter",
     dependencies = { "mini.icons" },
-    -- after = function ()
-    --
-    -- end
   },
   {
     "noice.nvim",

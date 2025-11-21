@@ -16,13 +16,21 @@ return {
     opts = {},
   },
   {
+    "colorful-menu.nvim",
+    event = "InsertEnter",
+    after = function()
+      require("colorful-menu").setup({})
+    end,
+  },
+  {
     "blink.cmp",
-    event = "DeferredUIEnter",
-    dependencies = {
-      "lspkind.nvim",
-      "nvim-web-devicons",
-      "blink-copilot",
-    },
+    event = "InsertEnter",
+    before = function()
+      LZE.trigger_load("lspkind.nvim")
+      LZE.trigger_load("nvim-web-devicons")
+      LZE.trigger_load("blink-copilot")
+      LZE.trigger_load("colorful-menu.nvim")
+    end,
     after = function()
       require("blink.cmp").setup({
         completion = {
@@ -30,8 +38,17 @@ return {
             auto_show = true,
             draw = {
               treesitter = { "lsp" },
-              -- columns = { { "kind_icon", "label", "label_description", gap = 1 }, { "kind" } },
-              -- components = {
+              columns = { { "kind_icon" }, { "label", gap = 1 } },
+              components = {
+                label = {
+                  text = function(ctx)
+                    return require("colorful-menu").blink_components_text(ctx)
+                  end,
+                  highlight = function(ctx)
+                    return require("colorful-menu").blink_components_highlight(ctx)
+                  end,
+                },
+              },
               --   kind_icon = {
               --     text = function(ctx)
               --       local icon = ctx.kind_icon

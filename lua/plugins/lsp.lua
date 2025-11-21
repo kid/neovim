@@ -2,11 +2,10 @@
 return {
   {
     "nvim-lspconfig",
+    event = "DeferredUIEnter",
     after = function()
       vim.diagnostic.config({
-        -- update_in_insert = true,
         virtual_text = true,
-        -- virtual_lines = { enable = true, current_line = true },
         underline = true,
         signs = {
           text = {
@@ -15,13 +14,6 @@ return {
             [vim.diagnostic.severity.INFO] = "",
             [vim.diagnostic.severity.HINT] = "",
           },
-          -- linehl = {
-          --   [vim.diagnostic.severity.ERROR] = "ErrorMsg",
-          -- },
-          -- numhl = {
-          --   [vim.diagnostic.severity.WARN] = "WarningMsg",
-          --   [vim.diagnostic.severity.ERROR] = "ErrorMsg",
-          -- },
         },
       })
 
@@ -36,6 +28,8 @@ return {
           vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
           vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
           vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts)
+          vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, opts)
+          vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, opts)
           vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
           vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, opts)
         end,

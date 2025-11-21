@@ -3,13 +3,12 @@ return {
   {
     "nvim-treesitter",
     event = "DeferredUIEnter",
-    opts = {
-      highlight = {
-        enable = true,
-      },
-      library = {
-        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-      },
-    },
+    after = function()
+      require("nvim-treesitter.configs").setup({
+        highlight = {
+          enable = true,
+        },
+      })
+    end,
   },
 }

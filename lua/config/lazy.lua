@@ -1,8 +1,8 @@
-local lze = require("lze")
+LZE = require("lze")
 
 local wkHandler = require("config.which-key-handler")
-lze.register_handlers(wkHandler)
-lze.load({
+LZE.register_handlers(wkHandler)
+LZE.load({
   { import = "plugins.ai" },
   { import = "plugins.completion" },
   { import = "plugins.dev" },

@@ -34,7 +34,10 @@ in
     };
 
     start = pkgs.vimPlugins.nvim-treesitter.withAllGrammars.dependencies;
-    startAttrs = npinsToPlugins ./npins/start.json;
+    startAttrs = {
+      inherit (pkgs.vimPlugins) nvim-treesitter;
+    }
+    // npinsToPlugins ./npins/start.json;
 
     optAttrs = {
       "blink.cmp" = inputs'.blink-cmp.packages.default;
@@ -50,6 +53,7 @@ in
     statix
     nil
     nixd
+    nixfmt-rfc-style
 
     lua-language-server
     stylua
