@@ -14,4 +14,5 @@ LZE.load({
   { import = "plugins.surround" },
   { import = "plugins.treesitter" },
   { import = "plugins.ui" },
+  { import = "plugins.git" },
 })

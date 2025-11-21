@@ -33,6 +33,14 @@ vim.o.splitright = true
 vim.o.wrap = false
 vim.o.breakindent = true
 
+vim.opt.fillchars:append({
+  eob = " ",
+  -- fold = " ",
+  -- foldopen = "",
+  -- foldsep = " ",
+  -- foldclose = "",
+})
+
 vim.api.nvim_create_autocmd("TextYankPost", {
   callback = function()
     vim.highlight.on_yank()
