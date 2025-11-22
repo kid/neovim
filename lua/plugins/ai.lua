@@ -1,7 +1,33 @@
 --- @type lze.PluginSpec[]
 return {
   {
+    "copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    load = function(name)
+      require("lzextras").loaders.multi({
+        name,
+        "copilot-cmp",
+      })
+    end,
+    config = function()
+      require("copilot").setup({
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+        nes = {
+          enabled = true,
+          keymap = {
+            accept_and_goto = "<leader>i",
+            accept = false,
+            dismiss = "<Esc>",
+          },
+        },
+      })
+    end,
+  },
+  {
     "opencode.nvim",
+    event = "DeferredUIEnter",
     before = function()
       LZE.trigger_load("snacks.nvim")
     end,
