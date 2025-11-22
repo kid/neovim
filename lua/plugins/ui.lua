@@ -56,4 +56,44 @@ return {
       })
     end,
   },
+  {
+    "todo-comments.nvim",
+    event = "DeferredUIEnter",
+    before = function()
+      LZE.trigger_load("trouble.nvim")
+    end,
+    after = function()
+      require("todo-comments").setup({})
+    end,
+    keys = {
+      -- FIXME: conflicts with next / previous tab
+      -- {
+      --   "n",
+      --   "]t",
+      --   function()
+      --     require("todo-comments").jump_next()
+      --   end,
+      --   { desc = "Next todo comment" },
+      -- },
+      -- {
+      --   "n",
+      --   "[t",
+      --   function()
+      --     require("todo-comments").jump_prev()
+      --   end,
+      --   { desc = "Previous todo comment" },
+      -- },
+    },
+  },
+  -- TODO: do I njeed quicker with Trouble?
+  {
+    "quicker.nvim",
+    ft = "qf",
+    before = function()
+      LZE.trigger_load("nui.nvim")
+    end,
+    after = function()
+      require("quicker").setup({})
+    end,
+  },
 }

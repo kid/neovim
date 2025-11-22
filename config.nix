@@ -61,5 +61,7 @@ in
     gopls
 
     copilot-language-server
+
+    ripgrep
   ];
 }
