@@ -7,6 +7,7 @@ return {
     after = function()
       require("gruvbox").setup({
         overrides = {
+          SignColumn = { bg = "none" },
           CursorLineNr = { bg = "none" },
           CursorLineSign = { bg = "none" },
           DiagnosticSignError = { bg = "none" },
