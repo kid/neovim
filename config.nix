@@ -63,5 +63,8 @@ in
     copilot-language-server
 
     ripgrep
+
+    # for opencode
+    lsof
   ];
 }

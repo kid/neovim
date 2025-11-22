@@ -16,22 +16,6 @@
       "url": "https://api.github.com/repos/fang2hou/blink-copilot/tarball/refs/tags/v1.4.1",
       "hash": "sha256-Ya9RagGE+Awo9xuF8XtwgAO2B9DKJLNsLDU2wsEMumo="
     },
-    "codecompanion.nvim": {
-      "type": "GitRelease",
-      "repository": {
-        "type": "GitHub",
-        "owner": "olimorris",
-        "repo": "codecompanion.nvim"
-      },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": null,
-      "submodules": false,
-      "version": "v17.32.0",
-      "revision": "68fcda022fce25ee380e267d4b0fe98113b3957d",
-      "url": "https://api.github.com/repos/olimorris/codecompanion.nvim/tarball/refs/tags/v17.32.0",
-      "hash": "sha256-J33VhN7XVo/DFXw+zIzeewMqV16rmt5ChUtLHtdlexE="
-    },
     "colorful-menu.nvim": {
       "type": "Git",
       "repository": {
@@ -305,6 +289,19 @@
       "revision": "7e1cd7703ff2924d7038476dcbc04b950203b902",
       "url": "https://github.com/stevearc/oil.nvim/archive/7e1cd7703ff2924d7038476dcbc04b950203b902.tar.gz",
       "hash": "sha256-ebRao8UU8UI1S6Lumkd5vUiYYSj9UAazcEzThKyl8Uk="
+    },
+    "opencode.nvim": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "NickvanDyke",
+        "repo": "opencode.nvim"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "a01c2f34f6c0253c4f31d8b6cf359357b7606288",
+      "url": "https://github.com/NickvanDyke/opencode.nvim/archive/a01c2f34f6c0253c4f31d8b6cf359357b7606288.tar.gz",
+      "hash": "sha256-96EvfobUgalHPebfV88I6c1kyTOZSW0/WTPuhaipZWw="
     },
     "quicker.nvim": {
       "type": "Git",
