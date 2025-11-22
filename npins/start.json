@@ -16,6 +16,22 @@
       "url": "https://api.github.com/repos/BirdeeHub/lze/tarball/refs/tags/v0.11.7",
       "hash": "sha256-1shG6hcrUGfcsf09Jt/nPaUoBzBmlE73s+j1tOK/KH8="
     },
+    "lzextras": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "BirdeeHub",
+        "repo": "lzextras"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v0.4.2",
+      "revision": "22fbed074294da68b00ad460648f929292c7d1fa",
+      "url": "https://api.github.com/repos/BirdeeHub/lzextras/tarball/refs/tags/v0.4.2",
+      "hash": "sha256-wGF01DOmA3/eFORR9d0dTNSh6FnhQ4lhEZDTld7Y76o="
+    },
     "plenary.nvim": {
       "type": "Git",
       "repository": {

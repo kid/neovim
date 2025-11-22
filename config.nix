@@ -35,7 +35,7 @@ in
 
     start = pkgs.vimPlugins.nvim-treesitter.withAllGrammars.dependencies;
     startAttrs = {
-      inherit (pkgs.vimPlugins) nvim-treesitter;
+      inherit (pkgs.vimPlugins) nvim-treesitter nvim-treesitter-textobjects;
     }
     // npinsToPlugins ./npins/start.json;
 
