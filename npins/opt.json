@@ -246,20 +246,17 @@
       "hash": "sha256-SJc9nfV6cnBKYwRWsv0iHy+RbET8frNV85reICf+pt8="
     },
     "nvim-lspconfig": {
-      "type": "GitRelease",
+      "type": "Git",
       "repository": {
         "type": "GitHub",
         "owner": "neovim",
         "repo": "nvim-lspconfig"
       },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": null,
+      "branch": "master",
       "submodules": false,
-      "version": "v2.5.0",
-      "revision": "5bfcc89fd155b4ffc02d18ab3b7d19c2d4e246a7",
-      "url": "https://api.github.com/repos/neovim/nvim-lspconfig/tarball/refs/tags/v2.5.0",
-      "hash": "sha256-BrY4l2irKsAmxDNPhW9eosOwsVdZjULyY6AOkqTAU4E="
+      "revision": "30a2b191bccf541ce1797946324c9329e90ec448",
+      "url": "https://github.com/neovim/nvim-lspconfig/archive/30a2b191bccf541ce1797946324c9329e90ec448.tar.gz",
+      "hash": "sha256-huuWVUKo6CmxjXYRnGv8tUs+7bo85gNyL8vVnreiTAU="
     },
     "nvim-surround": {
       "type": "GitRelease",
