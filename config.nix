@@ -9,6 +9,8 @@ let
     input: builtins.mapAttrs (_: v: v { inherit pkgs; }) (import ./npins { inherit input; });
 in
 {
+  inherit (inputs'.neovim-nightly.packages) neovim;
+
   appName = "nvim-kid-mnw";
 
   initLua =

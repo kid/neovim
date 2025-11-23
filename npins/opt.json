@@ -42,32 +42,6 @@
       "url": "https://github.com/stevearc/conform.nvim/archive/1bf8b5b9caee51507aa51eaed3da5b0f2595c6b9.tar.gz",
       "hash": "sha256-CpoqqC6sam0LV9D2mYyD4FVpEMS2yK+RKwNyq9aR8W8="
     },
-    "copilot-lsp": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "copilotlsp-nvim",
-        "repo": "copilot-lsp"
-      },
-      "branch": "main",
-      "submodules": false,
-      "revision": "884034b23c3716d55b417984ad092dc2b011115b",
-      "url": "https://github.com/copilotlsp-nvim/copilot-lsp/archive/884034b23c3716d55b417984ad092dc2b011115b.tar.gz",
-      "hash": "sha256-g9/yQ7wsyJQHCp+nKTy5WFGoHPtXEEIMwfyuCasmHTY="
-    },
-    "copilot.lua": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "zbirenbaum",
-        "repo": "copilot.lua"
-      },
-      "branch": "master",
-      "submodules": false,
-      "revision": "4383e05a47493d7ff77b058c0548129eb38ec7fb",
-      "url": "https://github.com/zbirenbaum/copilot.lua/archive/4383e05a47493d7ff77b058c0548129eb38ec7fb.tar.gz",
-      "hash": "sha256-NMIXOb/20aEmXvPgSDPzVuRIV+OUnJyfXVaVEuVAaTM="
-    },
     "diffview.nvim": {
       "type": "Git",
       "repository": {

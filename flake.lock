@@ -140,6 +140,27 @@
         "type": "github"
       }
     },
+    "flake-parts_4": {
+      "inputs": {
+        "nixpkgs-lib": [
+          "neovim-nightly",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1763759067,
+        "narHash": "sha256-LlLt2Jo/gMNYAwOgdRQBrsRoOz7BPRkzvNaI/fzXi2Q=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "2cccadc7357c0ba201788ae99c4dfa90728ef5e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
     "mnw": {
       "locked": {
         "lastModified": 1763076462,
@@ -152,6 +173,44 @@
       "original": {
         "owner": "Gerg-L",
         "repo": "mnw",
+        "type": "github"
+      }
+    },
+    "neovim-nightly": {
+      "inputs": {
+        "flake-parts": "flake-parts_4",
+        "neovim-src": "neovim-src",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1763769887,
+        "narHash": "sha256-Viyww4Atra7fD4IuhUwFGBtkyIgzuG3lLXu9gdGdEaU=",
+        "owner": "nix-community",
+        "repo": "neovim-nightly-overlay",
+        "rev": "34efe16d64996dca36f9bae9fb954a867f9d2680",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "neovim-nightly-overlay",
+        "type": "github"
+      }
+    },
+    "neovim-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1763766790,
+        "narHash": "sha256-GLflfd2+d4KEwvwapZGvjVuYUFAsbpDxEkgmOni89JM=",
+        "owner": "neovim",
+        "repo": "neovim",
+        "rev": "1c12073db6c64eb365748f153f96be9b0fe61070",
+        "type": "github"
+      },
+      "original": {
+        "owner": "neovim",
+        "repo": "neovim",
         "type": "github"
       }
     },
@@ -267,6 +326,7 @@
         "blink-pairs": "blink-pairs",
         "flake-parts": "flake-parts_3",
         "mnw": "mnw",
+        "neovim-nightly": "neovim-nightly",
         "nixpkgs": "nixpkgs_3",
         "npins": "npins",
         "systems": "systems",
