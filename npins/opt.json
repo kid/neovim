@@ -100,6 +100,22 @@
       "url": "https://github.com/rafamadriz/friendly-snippets/archive/572f5660cf05f8cd8834e096d7b4c921ba18e175.tar.gz",
       "hash": "sha256-FzApcTbWfFkBD9WsYMhaCyn6ky8UmpUC2io/co/eByM="
     },
+    "fyler.nvim": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "A7Lavinraj",
+        "repo": "fyler.nvim"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v2.0.0",
+      "revision": "bb8b9f30c652c948d35211958b0deec3496bcc08",
+      "url": "https://api.github.com/repos/A7Lavinraj/fyler.nvim/tarball/refs/tags/v2.0.0",
+      "hash": "sha256-Caf1dJiIATbs0PNjSANjA3QgHg7PdeMz9Pjoc0Ti7G4="
+    },
     "gitsigns.nvim": {
       "type": "Git",
       "repository": {
@@ -289,19 +305,6 @@
       "revision": "5b9067899ee6a2538891573500e8fd6ff008440f",
       "url": "https://api.github.com/repos/nvim-tree/nvim-web-devicons/tarball/refs/tags/v0.100",
       "hash": "sha256-DSUTxUFCesXuaJjrDNvurILUt1IrO5MI5ukbZ8D87zQ="
-    },
-    "oil.nvim": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "stevearc",
-        "repo": "oil.nvim"
-      },
-      "branch": "master",
-      "submodules": false,
-      "revision": "7e1cd7703ff2924d7038476dcbc04b950203b902",
-      "url": "https://github.com/stevearc/oil.nvim/archive/7e1cd7703ff2924d7038476dcbc04b950203b902.tar.gz",
-      "hash": "sha256-ebRao8UU8UI1S6Lumkd5vUiYYSj9UAazcEzThKyl8Uk="
     },
     "opencode.nvim": {
       "type": "Git",
