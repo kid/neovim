@@ -40,7 +40,7 @@ return {
           vim.keymap.set("n", "gd", Snacks.picker.lsp_definitions, { desc = "Go to Definition" })
           vim.keymap.set("n", "gD", Snacks.picker.lsp_type_definitions, { desc = "Go to Type Definition" })
           vim.keymap.set("n", "gi", Snacks.picker.lsp_implementations, { desc = "Go to Implementation" })
-          vim.keymap.set("n", "gr", Snacks.picker.lsp_references, { desc = "Go to References" })
+          vim.keymap.set("n", "gR", Snacks.picker.lsp_references, { desc = "Go to References" })
           vim.keymap.set("n", "<leader>ls", Snacks.picker.lsp_symbols, { desc = "Search Symbols" })
           vim.keymap.set("n", "<leader>lw", Snacks.picker.lsp_workspace_symbols, { desc = "Search Workspace Symbols" })
           vim.keymap.set("n", "<leader>lci", Snacks.picker.lsp_incoming_calls, { desc = "Go to incoming calls" })
