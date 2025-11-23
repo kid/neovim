@@ -17,24 +17,22 @@ return {
         },
       })
 
-      vim.lsp.config("*", {
-        on_attach = function(client)
+      vim.api.nvim_create_autocmd("LspAttach", {
+        callback = function(args)
+          local bufnr = args.buf
+          local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+
           if client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
             Snacks.toggle.inlay_hints():map("<leader>lh")
           end
 
-          if client:supports_method(vim.lsp.protocol.Methods.textDocument_inlineCompletion) then
-            vim.lsp.inline_completion.enable(true)
+          if client:supports_method(vim.lsp.protocol.Methods.textDocument_inlineCompletion, bufnr) then
+            vim.lsp.inline_completion.enable(true, { bufnr = bufnr })
 
-            vim.keymap.set("i", "<A-y>", function()
-              if not vim.lsp.inline_completion.get() then
-                return "<A-y>"
-              end
-            end, {
-              expr = true,
-              replace_keycodes = true,
-              desc = "Accept the current inline completion",
-            })
+            -- stylua: ignore start
+            vim.keymap.set("i", "<A-y>", vim.lsp.inline_completion.get,    { desc = "LSP: Accept current inline completion", buffer = bufnr })
+            vim.keymap.set("i", "<A-n>", vim.lsp.inline_completion.select, { desc = "LSP: Switch inline completion",         buffer = bufnr })
+            -- stylua: ignore end
           end
 
           vim.keymap.set("n", "gd", Snacks.picker.lsp_definitions, { desc = "Go to Definition" })
@@ -51,6 +49,7 @@ return {
           vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Show Line Diagnostics" })
         end,
       })
+
       vim.lsp.enable({ "lua_ls", "nil_ls", "nixd", "statix", "gopls", "copilot" })
     end,
     key_groups = {
