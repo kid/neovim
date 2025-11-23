@@ -2,11 +2,13 @@
 return {
   {
     "fyler.nvim",
-    dependencies = { "mini.icons" },
     lazy = false,
     keys = {
-      { "<leader>e", "<cmd>Fyler<cr>" },
+      { "<leader>e", "<cmd>Fyler<cr>", desc = "Open Fyler View" },
     },
+    before = function()
+      LZE.trigger_load("nvim-web-devicons")
+    end,
     after = function()
       require("fyler").setup({})
     end,
