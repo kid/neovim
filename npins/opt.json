@@ -332,6 +332,22 @@
       "url": "https://github.com/stevearc/quicker.nvim/archive/12a2291869a326424b1cbee937f4f80334433012.tar.gz",
       "hash": "sha256-rTfTubLhDSOWv8UtcVgEMoFHS/vAF+WR6P7Gqx9IcDs="
     },
+    "smart-splits.nvim": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "mrjones2014",
+        "repo": "smart-splits.nvim"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v2.0.5",
+      "revision": "0b5eb952e7bb07569bd19818bb1a9c1ed7d822e3",
+      "url": "https://api.github.com/repos/mrjones2014/smart-splits.nvim/tarball/refs/tags/v2.0.5",
+      "hash": "sha256-EqnSGTyADvIpHxN3jZxwetENdqv/XUossUzrEvLHHMk="
+    },
     "snacks.nvim": {
       "type": "GitRelease",
       "repository": {

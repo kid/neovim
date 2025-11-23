@@ -97,4 +97,31 @@ return {
       require("quicker").setup({})
     end,
   },
+  {
+    "smart-splits.nvim",
+    event = "DeferredUIEnter",
+    after = function()
+      require("smart-splits").setup({
+        at_edge = "stop",
+      })
+    end,
+    keys = {
+      -- stylua: ignore start
+      { "<C-h>", function() require("smart-splits").move_cursor_left()  end, desc = "Move cursor left"  },
+      { "<C-j>", function() require("smart-splits").move_cursor_down()  end, desc = "Move cursor down"  },
+      { "<C-k>", function() require("smart-splits").move_cursor_up()    end, desc = "Move cursor up"    },
+      { "<C-l>", function() require("smart-splits").move_cursor_right() end, desc = "Move cursor right" },
+
+      { "<A-h>", function() require("smart-splits").resize_left()  end, desc = "Resize left"  },
+      { "<A-j>", function() require("smart-splits").resize_down()  end, desc = "Resize down"  },
+      { "<A-k>", function() require("smart-splits").resize_up()    end, desc = "Resize up"    },
+      { "<A-l>", function() require("smart-splits").resize_right() end, desc = "Resize right" },
+
+      { "<C-w>h", function() require("smart-splits").swap_buf_left()  end, desc = "Swap buffer left"  },
+      { "<C-w>j", function() require("smart-splits").swap_buf_down()  end, desc = "Swap buffer down"  },
+      { "<C-w>k", function() require("smart-splits").swap_buf_up()    end, desc = "Swap buffer up"    },
+      { "<C-w>l", function() require("smart-splits").swap_buf_right() end, desc = "Swap buffer right" },
+      -- stylua: ignore end
+    },
+  },
 }
