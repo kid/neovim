@@ -1,14 +1,14 @@
 --- @type lze.PluginSpec[]
 return {
   {
-    "oil.nvim",
+    "fyler.nvim",
     dependencies = { "mini.icons" },
     lazy = false,
     keys = {
-      { "<leader>e", "<cmd>Oil<cr>" },
+      { "<leader>e", "<cmd>Fyler<cr>" },
     },
     after = function()
-      require("oil").setup({})
+      require("fyler").setup({})
     end,
   },
 }

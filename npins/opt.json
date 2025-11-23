@@ -290,18 +290,18 @@
       "url": "https://api.github.com/repos/nvim-tree/nvim-web-devicons/tarball/refs/tags/v0.100",
       "hash": "sha256-DSUTxUFCesXuaJjrDNvurILUt1IrO5MI5ukbZ8D87zQ="
     },
-    "oil.nvim": {
+    "fyler.nvim": {
       "type": "Git",
       "repository": {
         "type": "GitHub",
-        "owner": "stevearc",
-        "repo": "oil.nvim"
+        "owner": "willothy",
+        "repo": "fyler.nvim"
       },
-      "branch": "master",
+      "branch": "main",
       "submodules": false,
-      "revision": "7e1cd7703ff2924d7038476dcbc04b950203b902",
-      "url": "https://github.com/stevearc/oil.nvim/archive/7e1cd7703ff2924d7038476dcbc04b950203b902.tar.gz",
-      "hash": "sha256-ebRao8UU8UI1S6Lumkd5vUiYYSj9UAazcEzThKyl8Uk="
+      "revision": "c0ae9ec59ae39e12e352adcb28e2b5e1a29e4f64",
+      "url": "https://github.com/willothy/fyler.nvim/archive/c0ae9ec59ae39e12e352adcb28e2b5e1a29e4f64.tar.gz",
+      "hash": "sha256-ABnfxLMtY8E5KqJkrtIlPB4ML7CSFvjizCabv7i7SbU="
     },
     "opencode.nvim": {
       "type": "Git",

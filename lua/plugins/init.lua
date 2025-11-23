@@ -1,7 +1,7 @@
 return {
   { import = "plugins.ui" },
   { import = "plugins.snacks" },
-  { import = "plugins.oil" },
+  { import = "plugins.fyler" },
   { import = "plugins.treesitter" },
   { import = "plugins.completion" },
   { import = "plugins.snippets" },
