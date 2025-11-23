@@ -69,4 +69,6 @@ in
     # for opencode
     lsof
   ];
+
+  extraLuaPackages = ps: [ ps.jsregexp ];
 }

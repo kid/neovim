@@ -69,7 +69,7 @@ return {
           default = {
             "lsp",
             "path",
-            -- "snippets",
+            "snippets",
             "buffer",
             "copilot",
           },
@@ -88,6 +88,9 @@ return {
               async = true,
             },
           },
+        },
+        snippets = {
+          preset = "luasnip",
         },
         fuzzy = {
           implementation = "prefer_rust_with_warning",

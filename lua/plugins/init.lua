@@ -4,6 +4,7 @@ return {
   { import = "plugins.oil" },
   { import = "plugins.treesitter" },
   { import = "plugins.completion" },
+  { import = "plugins.snippets" },
   { import = "plugins.surround" },
   { import = "plugins.git" },
   { import = "plugins.lsp" },
