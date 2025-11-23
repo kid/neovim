@@ -20,7 +20,8 @@ vim.keymap.set({ "n", "v" }, "<leader>P",  '"+P',  { desc = "Paste from system c
 
 -- Save with Ctrl+S
 vim.keymap.set({ "n", "v" }, "<C-s>", "<Esc><cmd>w<cr>",  { desc = "Save file" })
-vim.keymap.set({ "i", },     "<C-s>", "<Esc><cmd>w<cr>i", { desc = "Save file" })
+-- FIXME: interfer with signature help
+-- vim.keymap.set({ "i", },     "<C-s>", "<Esc><cmd>w<cr>i", { desc = "Save file" })
 
 -- Disable command-line window
 vim.keymap.set("n", "q:", "<nop>")
