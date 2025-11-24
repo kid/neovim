@@ -72,20 +72,17 @@
       "hash": "sha256-SX+ybIzL/w6uyCy4iZKnWnzTFwqB1oXSgyYVAdpdKi8="
     },
     "flash.nvim": {
-      "type": "GitRelease",
+      "type": "Git",
       "repository": {
         "type": "GitHub",
         "owner": "folke",
         "repo": "flash.nvim"
       },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": null,
+      "branch": "main",
       "submodules": false,
-      "version": "v2.1.0",
-      "revision": "ec0bf2842189f65f60fd40bf3557cac1029cc932",
-      "url": "https://api.github.com/repos/folke/flash.nvim/tarball/refs/tags/v2.1.0",
-      "hash": "sha256-Qh9ty28xtRS3qXxE/ugx9FqAKrdeFGEf7W6yEORnZV8="
+      "revision": "fcea7ff883235d9024dc41e638f164a450c14ca2",
+      "url": "https://github.com/folke/flash.nvim/archive/fcea7ff883235d9024dc41e638f164a450c14ca2.tar.gz",
+      "hash": "sha256-pHh0tJd/ynfjriu8xjnKunKVDHkoXii6ZbikdkIwovY="
     },
     "friendly-snippets": {
       "type": "Git",
