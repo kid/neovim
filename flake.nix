@@ -80,9 +80,9 @@
                 deadnix
                 statix
               ]
-              ++ [
-                self'.packages.dev
-                self'.packages.npins
+              ++ [ self'.packages.dev ]
+              # FIXME: Npins is  broken on Darwin
+              ++ lib.optionals (!pkgs.stdenv.isDarwin) [
                 (pkgs.writeShellScriptBin "start" ''
                   npins --lock-file ./npins/start.json "$@"
                 '')
