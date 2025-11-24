@@ -68,7 +68,9 @@
             dev = self'.packages.default.devMode;
             inherit (self'.packages.default) configDir;
 
-            npins = pkgs.callPackage (npins + /npins.nix) { };
+            npins = (pkgs.callPackage (npins + /npins.nix) { }).overrideAttrs {
+              buildInputs = lib.optional pkgs.stdenv.isDarwin [ pkgs.apple-sdk ];
+            };
           };
 
           devShells.default = pkgs.mkShellNoCC {
@@ -80,9 +82,9 @@
                 deadnix
                 statix
               ]
-              ++ [ self'.packages.dev ]
-              # FIXME: Npins is  broken on Darwin
-              ++ lib.optionals (!pkgs.stdenv.isDarwin) [
+              ++ [
+                self'.packages.dev
+                self'.packages.npins
                 (pkgs.writeShellScriptBin "start" ''
                   npins --lock-file ./npins/start.json "$@"
                 '')
