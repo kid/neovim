@@ -50,7 +50,24 @@ return {
         end,
       })
 
-      vim.lsp.enable({ "lua_ls", "nil_ls", "nixd", "statix", "gopls", "copilot", "tofu_ls" })
+      vim.lsp.enable({
+        "copilot",
+        "lua_ls",
+
+        -- Nix
+        "nil_ls",
+        "nixd",
+        "statix",
+
+        "gopls",
+
+        "terraformls",
+        "tofu_ls",
+
+        -- Javascript / Typescript
+        "ts_ls",
+        "eslint",
+      })
     end,
     key_groups = {
       { "<leader>l", group = "LSP" },
