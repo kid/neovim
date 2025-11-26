@@ -1,3 +1,4 @@
+--- @module "lze"
 --- @type lze.PluginSpec[]
 return {
   { "friendly-snippets", event = "InsertEnter" },

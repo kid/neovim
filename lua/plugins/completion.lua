@@ -2,6 +2,7 @@
 -- TODO: implement copilot next edit suggestions
 -- FIXME: kind icon alignment
 
+--- @module "lze"
 --- @type lze.PluginSpec[]
 return {
   {
