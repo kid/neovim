@@ -139,6 +139,19 @@
       "url": "https://github.com/ellisonleao/gruvbox.nvim/archive/5e0a460d8e0f7f669c158dedd5f9ae2bcac31437.tar.gz",
       "hash": "sha256-EJG0MQ5fEh2lUxUnJhcBGJdV1l7AmKjUjwNdGAFIpnQ="
     },
+    "helm-ls.nvim": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "qvalentin",
+        "repo": "helm-ls.nvim"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "d6f3a8d4ad59b4f54cd734267dfb5411679ea608",
+      "url": "https://github.com/qvalentin/helm-ls.nvim/archive/d6f3a8d4ad59b4f54cd734267dfb5411679ea608.tar.gz",
+      "hash": "sha256-W9NRa84l5Cs62OsDeqb+LMxk8oYjhVBCB3o3UmE9a0I="
+    },
     "lazydev.nvim": {
       "type": "GitRelease",
       "repository": {
@@ -328,6 +341,22 @@
       "revision": "12a2291869a326424b1cbee937f4f80334433012",
       "url": "https://github.com/stevearc/quicker.nvim/archive/12a2291869a326424b1cbee937f4f80334433012.tar.gz",
       "hash": "sha256-rTfTubLhDSOWv8UtcVgEMoFHS/vAF+WR6P7Gqx9IcDs="
+    },
+    "render-markdown.nvim": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "MeanderingProgrammer",
+        "repo": "render-markdown.nvim"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v8.10.0",
+      "revision": "e8678b53fd3009dba46d70598564c2c3fd3ebd79",
+      "url": "https://api.github.com/repos/MeanderingProgrammer/render-markdown.nvim/tarball/refs/tags/v8.10.0",
+      "hash": "sha256-wNtAakOZPrzpp7btAfHZ4xseWOpdcX1QgPWNGbDYJVM="
     },
     "smart-splits.nvim": {
       "type": "GitRelease",

@@ -68,6 +68,8 @@ in
 
     # for opencode
     lsof
+
+    helm-ls
   ];
 
   extraLuaPackages = ps: [ ps.jsregexp ];

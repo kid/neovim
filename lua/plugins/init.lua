@@ -11,5 +11,6 @@ return {
   { import = "plugins.dev" },
   { import = "plugins.formatting" },
   { import = "plugins.ai" },
-  { import = "plugins.markview" },
+  { import = "plugins.markdown" },
+  { import = "plugins.misc" },
 }

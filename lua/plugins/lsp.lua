@@ -67,6 +67,8 @@ return {
         -- Javascript / Typescript
         "ts_ls",
         "eslint",
+
+        "helm_ls",
       })
     end,
     key_groups = {
