@@ -6,7 +6,13 @@ return {
     event = "DeferredUIEnter",
     after = function()
       vim.diagnostic.config({
-        virtual_text = true,
+        virtual_text = {
+          current_line = false,
+          source = true,
+        },
+        virtual_lines = {
+          current_line = true,
+        },
         underline = true,
         signs = {
           text = {
