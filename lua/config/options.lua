@@ -16,8 +16,11 @@ vim.o.showmode = false -- disable showing mode below statusline
 vim.o.cursorline = true
 vim.o.cursorlineopt = "number"
 vim.o.signcolumn = "yes"
-vim.o.smartcase = true
-vim.o.incsearch = true
+vim.o.smartcase = true -- Respect case if search pattern has upper case
+vim.o.incsearch = true -- Ignore case during search
+vim.o.infercase = true -- Infer case in built-in completion
+vim.o.ignorecase = true -- Ignore case during search
+vim.o.hlsearch = false -- Disable highlight search results
 
 vim.o.tabstop = 2 -- how many spaces tab inserts
 vim.o.softtabstop = 2 -- how many spaces tab inserts
