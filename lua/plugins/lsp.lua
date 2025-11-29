@@ -51,7 +51,7 @@ return {
         end,
       })
 
-      vim.lsp.enable({
+      local servers = {
         "copilot",
         "lua_ls",
 
@@ -70,7 +70,21 @@ return {
         "eslint",
 
         "helm_ls",
-      })
+      }
+
+      local enabled = {}
+      for _, name in ipairs(servers) do
+        local cfg = vim.lsp.config and vim.lsp.config[name]
+        local cmd = cfg and cfg.cmd
+        if type(cmd) == "table" and #cmd > 0 then
+          local bin = cmd[1]
+          if type(bin) == "string" and vim.fn.executable(bin) == 1 then
+            table.insert(enabled, name)
+          end
+        end
+      end
+
+      vim.lsp.enable(enabled)
     end,
     key_groups = {
       { "<leader>l", group = "LSP" },

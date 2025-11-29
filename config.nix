@@ -50,26 +50,11 @@ in
 
   extraBinPath = with pkgs; [
     sqlite
-
-    deadnix
-    statix
-    nil
-    nixd
-    nixfmt-rfc-style
-
-    lua-language-server
-    stylua
-
-    gopls
-
-    copilot-language-server
-
     ripgrep
+    copilot-language-server
 
     # for opencode
     lsof
-
-    helm-ls
   ];
 
   extraLuaPackages = ps: [ ps.jsregexp ];

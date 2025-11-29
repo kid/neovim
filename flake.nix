@@ -78,6 +78,7 @@
               with pkgs;
               [
                 opencode
+                lua-language-server
                 stylua
                 deadnix
                 statix
