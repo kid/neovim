@@ -29,6 +29,17 @@ return {
 
           if client:supports_method(vim.lsp.protocol.Methods.textDocument_inlineCompletion, bufnr) then
             vim.lsp.inline_completion.enable(true, { bufnr = bufnr })
+            Snacks.toggle
+              .new({
+                name = "Inline Completions",
+                get = function()
+                  return vim.lsp.inline_completion.is_enabled({ bufnr = 0 })
+                end,
+                set = function(state)
+                  vim.lsp.inline_completion.enable(state, { bufnr = bufnr })
+                end,
+              })
+              :map("<leader>li")
 
             -- stylua: ignore start
             vim.keymap.set("i", "<A-y>", vim.lsp.inline_completion.get,    { desc = "LSP: Accept current inline completion", buffer = bufnr })
