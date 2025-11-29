@@ -30,7 +30,8 @@ vim.o.scrolloff = 8 -- always keep 8 lines above/below cursor unless at start/en
 vim.o.splitbelow = true
 vim.o.splitright = true
 
-vim.o.wrap = false
+vim.o.wrap = true
+vim.o.linebreak = true
 vim.o.breakindent = true
 
 vim.opt.fillchars:append({
