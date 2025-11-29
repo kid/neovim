@@ -3,6 +3,8 @@
 return {
   {
     "conform.nvim",
+    event = { "BufWritePre" },
+    cmd = "ConformInfo",
     lazy = false,
     after = function()
       require("conform").setup({
@@ -23,5 +25,15 @@ return {
         },
       })
     end,
+    keys = {
+      {
+        "<leader>lf",
+        function()
+          require("conform").format({ async = true })
+        end,
+        mode = "",
+        desc = "Format File",
+      },
+    },
   },
 }

@@ -46,7 +46,6 @@ return {
           vim.keymap.set("n", "<leader>lca", Snacks.picker.lsp_outgoing_calls, { desc = "Go to outgoing calls" })
           vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, { desc = "Rename Symbol" })
           vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Code Action" })
-          vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format Document" })
           vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Show Line Diagnostics" })
         end,
       })
