@@ -37,6 +37,8 @@ vim.o.wrap = true
 vim.o.linebreak = true
 vim.o.breakindent = true
 
+vim.o.timeoutlen = 100
+
 vim.opt.fillchars:append({
   eob = " ",
   -- fold = " ",

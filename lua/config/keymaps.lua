@@ -22,6 +22,7 @@ vim.keymap.set({ "n", "v" }, "<leader>P",  '"+P',  { desc = "Paste from system c
 vim.keymap.set({ "n", "v" }, "<C-s>", "<Esc><cmd>w<cr>",  { desc = "Save file" })
 -- FIXME: interfer with signature help
 -- vim.keymap.set({ "i", },     "<C-s>", "<Esc><cmd>w<cr>i", { desc = "Save file" })
+-- stylua: ignore end
 
 -- Disable command-line window
 vim.keymap.set("n", "q:", "<nop>")
@@ -33,4 +34,11 @@ vim.keymap.set("n", "<leader>q", function()
   end
   vim.cmd("bd")
 end, { desc = "Close buffer" })
--- stylua: ignore end
+
+vim.keymap.set("i", "<C-L>", function()
+  local node = vim.treesitter.get_node()
+  if node ~= nil then
+    local row, col = node:end_()
+    pcall(vim.api.nvim_win_set_cursor, 0, { row + 1, col })
+  end
+end, { desc = "Jump to end of current TS node" })
