@@ -11,7 +11,13 @@ return {
       LZE.trigger_load("nvim-web-devicons")
     end,
     after = function()
-      require("fyler").setup({})
+      require("fyler").setup({
+        views = {
+          finder = {
+            default_explorer = true,
+          },
+        },
+      })
     end,
   },
 }
