@@ -1,7 +1,3 @@
--- TODO: add colorful.menu
--- TODO: implement copilot next edit suggestions
--- FIXME: kind icon alignment
-
 --- @module "lze"
 --- @type lze.PluginSpec[]
 return {
@@ -9,7 +5,16 @@ return {
     "lspkind.nvim",
     event = "DeferredUIEnter",
   },
-  { "nvim-web-devicons" },
+  {
+    "nvim-web-devicons",
+    after = function()
+      require("nvim-web-devicons").setup({
+        override_by_extension = {
+          ["tofu"] = { icon = "", color = "#4732AF", cterm_color = "55", name = "Terraform" },
+        },
+      })
+    end,
+  },
   {
     "blink-copilot",
     event = "DeferredUIEnter",

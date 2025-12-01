@@ -12,6 +12,9 @@ return {
     end,
     after = function()
       require("fyler").setup({
+        integrations = {
+          icon = "nvim_web_devicons",
+        },
         views = {
           finder = {
             default_explorer = true,

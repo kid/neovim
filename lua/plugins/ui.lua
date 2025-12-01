@@ -23,7 +23,10 @@ return {
   {
     "lualine.nvim",
     event = "DeferredUIEnter",
-    dependencies = { "nvim-wev-devicons", "noice.nvim" },
+    before = function()
+      LZE.trigger_load("nvim-web-devicons")
+      LZE.trigger_load("noice.nvim")
+    end,
     after = function()
       require("lualine").setup({
         options = {
@@ -56,8 +59,10 @@ return {
   },
   {
     "noice.nvim",
-    dependencies = { "nui.nvim" },
     event = "DeferredUIEnter",
+    before = function()
+      LZE.trigger_load("nui.nvim")
+    end,
     after = function()
       -- TODO: replace lsp progress with fidget later
       require("noice").setup({
