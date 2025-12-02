@@ -33,6 +33,7 @@
       perSystem =
         {
           lib,
+          config,
           pkgs,
           system,
           self',
@@ -74,6 +75,7 @@
           };
 
           devShells.default = pkgs.mkShellNoCC {
+            inputsFrom = [ config.treefmt.build.devShell ];
             packages =
               with pkgs;
               [
