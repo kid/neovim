@@ -52,5 +52,29 @@ return {
     after = function()
       require("gitsigns").setup()
     end,
+    keys = {
+      {
+        "]c",
+        function()
+          if vim.wo.diff then
+            vim.cmd.normal({ "]c", bang = true })
+          else
+            require("gitsigns").nav_hunk("next")
+          end
+        end,
+        desc = "Go to next git hunk",
+      },
+      {
+        "[c",
+        function()
+          if vim.wo.diff then
+            vim.cmd.normal({ "[c", bang = true })
+          else
+            require("gitsigns").nav_hunk("prev")
+          end
+        end,
+        desc = "Go to previous git hunk",
+      },
+    },
   },
 }
