@@ -26,6 +26,7 @@ return {
     before = function()
       LZE.trigger_load("nvim-web-devicons")
       LZE.trigger_load("noice.nvim")
+      LZE.trigger_load("sidekick.nvim")
     end,
     after = function()
       require("lualine").setup({
@@ -43,7 +44,31 @@ return {
               end,
             },
           },
+          lualine_c = {
+            { "lsp_status " },
+            {
+              function()
+                return " "
+              end,
+              color = function()
+                local status = require("sidekick.status").get()
+                if status then
+                  return status.kind == "Error" and "DiagnosticError" or status.busy and "DiagnosticWarn" or "Special"
+                end
+              end,
+              cond = function()
+                local status = require("sidekick.status")
+                return status.get() ~= nil
+              end,
+            },
+            { "filename", path = 1 },
+          },
         },
+        tabline = {
+          lualine_a = { { "buffers", show_filename_only = false } },
+          lualine_z = { { "tabs" } },
+        },
+        extensions = { "quickfix" },
       })
     end,
   },
