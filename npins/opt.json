@@ -358,6 +358,22 @@
       "url": "https://api.github.com/repos/MeanderingProgrammer/render-markdown.nvim/tarball/refs/tags/v8.10.0",
       "hash": "sha256-wNtAakOZPrzpp7btAfHZ4xseWOpdcX1QgPWNGbDYJVM="
     },
+    "sidekick.nvim": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "folke",
+        "repo": "sidekick.nvim"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v2.1.0",
+      "revision": "dc2710af65a542eb3010136d7664b626633f0229",
+      "url": "https://api.github.com/repos/folke/sidekick.nvim/tarball/refs/tags/v2.1.0",
+      "hash": "sha256-DsDJPDIm07Uxxah7AP2GR7D+jxya9fnsJ1OS/ia5ipw="
+    },
     "smart-splits.nvim": {
       "type": "GitRelease",
       "repository": {

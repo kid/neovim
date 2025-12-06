@@ -30,4 +30,40 @@ return {
       -- stylua: ignore end
     end,
   },
+  {
+    "sidekick.nvim",
+    event = "DeferredUIEnter",
+    before = function()
+      LZE.trigger_load("snacks.nvim")
+    end,
+    after = function()
+      ---@type sidekick.Config
+      require("sidekick").setup({
+        nes = {
+          enabled = true,
+        },
+        signs = {
+          enabled = true,
+          icon = " ",
+        },
+        cli = {
+          enabled = false,
+        },
+      })
+    end,
+    keys = {
+      {
+        "<tab>",
+        function()
+          -- if there is a next edit, jump to it, otherwise apply it if any
+          if not require("sidekick").nes_jump_or_apply() then
+            ---@diagnostic disable-next-line: redundant-return-value
+            return "<Tab>" -- fallback to normal tab
+          end
+        end,
+        expr = true,
+        desc = "Goto/Apply Next Edit Suggestion",
+      },
+    },
+  },
 }
