@@ -41,6 +41,9 @@ return {
       require("sidekick").setup({
         nes = {
           enabled = true,
+          diff = {
+            inline = false,
+          },
         },
         signs = {
           enabled = true,
