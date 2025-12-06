@@ -34,15 +34,15 @@ return {
           end
 
           if client:supports_method(vim.lsp.protocol.Methods.textDocument_inlineCompletion, bufnr) then
-            vim.lsp.inline_completion.enable(true, { bufnr = bufnr })
+            vim.lsp.inline_completion.enable(true)
             Snacks.toggle
               .new({
                 name = "Inline Completions",
                 get = function()
-                  return vim.lsp.inline_completion.is_enabled({ bufnr = 0 })
+                  return vim.lsp.inline_completion.is_enabled()
                 end,
                 set = function(state)
-                  vim.lsp.inline_completion.enable(state, { bufnr = bufnr })
+                  vim.lsp.inline_completion.enable(state)
                 end,
               })
               :map("<leader>li")
