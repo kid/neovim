@@ -11,10 +11,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v0.11.7",
-      "revision": "ee1ed45e97ebcf3ab3de72d4047510530fc6a775",
-      "url": "https://api.github.com/repos/BirdeeHub/lze/tarball/refs/tags/v0.11.7",
-      "hash": "sha256-1shG6hcrUGfcsf09Jt/nPaUoBzBmlE73s+j1tOK/KH8="
+      "version": "v0.12.0",
+      "revision": "1675c09c29d3936485f60d0c4f6fbfd1902c924c",
+      "url": "https://api.github.com/repos/BirdeeHub/lze/tarball/refs/tags/v0.12.0",
+      "hash": "sha256-6pYCieJb1F+6znzWwhb8KCm/BAsCbMVzf94fUh4ZU3k="
     },
     "lzextras": {
       "type": "GitRelease",

@@ -54,9 +54,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "4993e07fac6679d0a5005aa7499e0bad2bd39f19",
-      "url": "https://github.com/stevearc/conform.nvim/archive/4993e07fac6679d0a5005aa7499e0bad2bd39f19.tar.gz",
-      "hash": "sha256-5LgC4YVNc8DgR+QOhy0sh+tAgsEwK5RarthQBDZa4fc="
+      "revision": "5420c4b5ea0aeb99c09cfbd4fd0b70d257b44f25",
+      "url": "https://github.com/stevearc/conform.nvim/archive/5420c4b5ea0aeb99c09cfbd4fd0b70d257b44f25.tar.gz",
+      "hash": "sha256-Pp4bGTlZEqxHoHqVCEekDdg2jvNayxAuBReK4HJ6yGg="
     },
     "diffview.nvim": {
       "type": "Git",
@@ -221,10 +221,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v0.16.0",
-      "revision": "fa041f6ad9c4c503992f59042fce4fed368f1444",
-      "url": "https://api.github.com/repos/nvim-mini/mini.icons/tarball/refs/tags/v0.16.0",
-      "hash": "sha256-/sdLtMOOGeVvFDBB9N4CyUHpGXtUi1ZJ9dIpvxZ9C4Q="
+      "version": "v0.17.0",
+      "revision": "f7136c3878d024c363062d5060658ea81cd13288",
+      "url": "https://api.github.com/repos/nvim-mini/mini.icons/tarball/refs/tags/v0.17.0",
+      "hash": "sha256-yns7HZFklgkiXoQJheDRAAtmoKTW9g+hpT/gf5DzwAw="
     },
     "neogit": {
       "type": "Git",
@@ -235,9 +235,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "a24620e541be8814f2357ae334bde947f7dae5a8",
-      "url": "https://github.com/neogitorg/neogit/archive/a24620e541be8814f2357ae334bde947f7dae5a8.tar.gz",
-      "hash": "sha256-88S9lURutwG7RPKq6CC8kE3MfOiXIrXufKzB//x1/jo="
+      "revision": "d8bf9102692250193b855acd9025a826f1af2729",
+      "url": "https://github.com/neogitorg/neogit/archive/d8bf9102692250193b855acd9025a826f1af2729.tar.gz",
+      "hash": "sha256-BBre2HyecQp1TlhJEWbkUpeu5Y4urZVgVf4dqU7RQT0="
     },
     "noice.nvim": {
       "type": "GitRelease",
@@ -280,9 +280,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "07f4e93de92e8d4ea7ab99602e3a8c9ac0fb778a",
-      "url": "https://github.com/neovim/nvim-lspconfig/archive/07f4e93de92e8d4ea7ab99602e3a8c9ac0fb778a.tar.gz",
-      "hash": "sha256-swN+zpQoOK0J7SxAYNr5nAyQjcooQFsiPIBkp6cDZdI="
+      "revision": "5eeb45c8c469b84777a5bd8796b698c8a1c780a7",
+      "url": "https://github.com/neovim/nvim-lspconfig/archive/5eeb45c8c469b84777a5bd8796b698c8a1c780a7.tar.gz",
+      "hash": "sha256-IBH4uWsNnD0uEUa/ITCBK20YknvycjUSu9ofKGzQo0M="
     },
     "nvim-surround": {
       "type": "GitRelease",
@@ -295,10 +295,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v3.1.7",
-      "revision": "fcfa7e02323d57bfacc3a141f8a74498e1522064",
-      "url": "https://api.github.com/repos/kylechui/nvim-surround/tarball/refs/tags/v3.1.7",
-      "hash": "sha256-EfANqB0BLbhfnM45MwzHV76/JtGyZtLvMC+06KPu2Uo="
+      "version": "v3.1.8",
+      "revision": "1098d7b3c34adcfa7feb3289ee434529abd4afd1",
+      "url": "https://api.github.com/repos/kylechui/nvim-surround/tarball/refs/tags/v3.1.8",
+      "hash": "sha256-IzJ9PWUeEw52Gs5nCH3zAUBbar3Wq6PCN+Rt6HKC1pc="
     },
     "nvim-web-devicons": {
       "type": "GitRelease",
@@ -325,9 +325,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "045770859dd1b74ade88d779ed0dae56b014290c",
-      "url": "https://github.com/NickvanDyke/opencode.nvim/archive/045770859dd1b74ade88d779ed0dae56b014290c.tar.gz",
-      "hash": "sha256-fjlSap7tqxmmd33wglGtuoRkICTRA+Ztb4ICwICJ7Gw="
+      "revision": "fef07f395ed8ce7818b6858443fa9fd0bcc406ad",
+      "url": "https://github.com/NickvanDyke/opencode.nvim/archive/fef07f395ed8ce7818b6858443fa9fd0bcc406ad.tar.gz",
+      "hash": "sha256-4DGupWKiFZgIWstltWM6oY2vHeOwo+pnhXwDV319rkU="
     },
     "quicker.nvim": {
       "type": "Git",
@@ -338,9 +338,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "9983d4b28881e1df626e3682167b45c284d4da8c",
-      "url": "https://github.com/stevearc/quicker.nvim/archive/9983d4b28881e1df626e3682167b45c284d4da8c.tar.gz",
-      "hash": "sha256-wUgu63qOYOjKQC9ceo9+LDfC5Kr5QColycCvi7V8tT4="
+      "revision": "771437c3e3672dba9233156e1c2e2fc1888a5fff",
+      "url": "https://github.com/stevearc/quicker.nvim/archive/771437c3e3672dba9233156e1c2e2fc1888a5fff.tar.gz",
+      "hash": "sha256-ce4UxGfM09hh5Z0LN0f9oFTrp0r5TzEi7dkxfuXZmf0="
     },
     "render-markdown.nvim": {
       "type": "GitRelease",
