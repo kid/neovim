@@ -7,12 +7,12 @@ return {
     after = function()
       vim.diagnostic.config({
         virtual_text = {
-          current_line = false,
+          current_line = true,
           source = true,
         },
-        virtual_lines = {
-          current_line = true,
-        },
+        -- virtual_lines = {
+        --   current_line = true,
+        -- },
         underline = true,
         signs = {
           text = {
