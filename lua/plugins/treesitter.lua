@@ -3,7 +3,6 @@
 return {
   {
     "nvim-treesitter",
-    event = "DeferredUIEnter",
     load = function(name)
       require("lzextras").loaders.multi({
         name,
