@@ -34,7 +34,7 @@ return {
           end
 
           if client:supports_method(vim.lsp.protocol.Methods.textDocument_inlineCompletion, bufnr) then
-            vim.lsp.inline_completion.enable(false)
+            vim.lsp.inline_completion.enable(true)
             Snacks.toggle
               .new({
                 name = "Inline Completions",

@@ -77,7 +77,7 @@ return {
             "path",
             "snippets",
             "buffer",
-            "copilot",
+            -- "copilot",
           },
           per_filetype = {
             lua = { "lazydev", inherit_defaults = true },
@@ -88,11 +88,11 @@ return {
               module = "lazydev.integrations.blink",
               score_offset = 100,
             },
-            copilot = {
-              name = "copilot",
-              module = "blink-copilot",
-              async = true,
-            },
+            -- copilot = {
+            --   name = "copilot",
+            --   module = "blink-copilot",
+            --   async = true,
+            -- },
           },
         },
         snippets = {
