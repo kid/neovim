@@ -325,9 +325,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "9566e58774e47256c380d62db7bfdc922f283a57",
-      "url": "https://github.com/NickvanDyke/opencode.nvim/archive/9566e58774e47256c380d62db7bfdc922f283a57.tar.gz",
-      "hash": "sha256-TUmnUJcyhy7jl8kKKiritBbrCtiEWlSbHRkwAbAZikE="
+      "revision": "93567824fb171d0740d0f7f1e85118bb061f1811",
+      "url": "https://github.com/NickvanDyke/opencode.nvim/archive/93567824fb171d0740d0f7f1e85118bb061f1811.tar.gz",
+      "hash": "sha256-L92X+hchWT7OiSE3cFxm6q+8JfE8lyfVjiDtemmossY="
     },
     "quicker.nvim": {
       "type": "Git",
