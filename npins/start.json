@@ -11,10 +11,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v0.11.7",
-      "revision": "ee1ed45e97ebcf3ab3de72d4047510530fc6a775",
-      "url": "https://api.github.com/repos/BirdeeHub/lze/tarball/refs/tags/v0.11.7",
-      "hash": "sha256-1shG6hcrUGfcsf09Jt/nPaUoBzBmlE73s+j1tOK/KH8="
+      "version": "v0.12.2",
+      "revision": "3730e8778f27fe1d4b9b3c54ac0d53f8a2642403",
+      "url": "https://api.github.com/repos/BirdeeHub/lze/tarball/refs/tags/v0.12.2",
+      "hash": "sha256-9RcNLq02lhXsw1af0IDjlE5TS5F8hUP0vvkPLR5X75A="
     },
     "lzextras": {
       "type": "GitRelease",
@@ -27,10 +27,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v0.4.2",
-      "revision": "22fbed074294da68b00ad460648f929292c7d1fa",
-      "url": "https://api.github.com/repos/BirdeeHub/lzextras/tarball/refs/tags/v0.4.2",
-      "hash": "sha256-wGF01DOmA3/eFORR9d0dTNSh6FnhQ4lhEZDTld7Y76o="
+      "version": "v0.5.0",
+      "revision": "2d5ff7c30cd2286d0cb1d8d97892481c40e40651",
+      "url": "https://api.github.com/repos/BirdeeHub/lzextras/tarball/refs/tags/v0.5.0",
+      "hash": "sha256-Fcx39AqqY7N3c31bTsc30WDNkbBKLrp/c+hwY3jFjw4="
     },
     "plenary.nvim": {
       "type": "Git",
