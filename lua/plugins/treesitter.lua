@@ -10,26 +10,12 @@ return {
         "nvim-treesitter-textobjects",
       })
     end,
+    before = function()
+      -- vim.g.no_plugin_maps = true
+    end,
     after = function()
-      require("nvim-treesitter.configs").setup({
-        highlight = {
-          enable = true,
-        },
-        textobjects = {
-          select = {
-            enable = true,
-
-            -- Automatically jump forward to textobj, similar to targets.vim
-            lookahead = true,
-
-            keymaps = {
-              -- You can use the capture groups defined in textobjects.scm
-              ["af"] = "@function.outer",
-              ["if"] = "@function.inner",
-            },
-          },
-        },
-      })
+      require("nvim-treesitter").setup()
+      require("nvim-treesitter-textobjects").setup()
     end,
   },
 }
