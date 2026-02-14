@@ -1,5 +1,18 @@
 {
   "pins": {
+    "jinja.vim": {
+      "type": "Git",
+      "repository": {
+        "type": "GitLab",
+        "repo_path": "HiPhish/jinja.vim",
+        "server": "https://gitlab.com/"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "05373374a288b20845937cbc3a7abda23a2e65d2",
+      "url": "https://gitlab.com/api/v4/projects/HiPhish%2Fjinja.vim/repository/archive.tar.gz?sha=05373374a288b20845937cbc3a7abda23a2e65d2",
+      "hash": "sha256-ubZo3TYi72WqcGoSoveYRYcwOYk4oNW28uAYw939u5M="
+    },
     "lze": {
       "type": "GitRelease",
       "repository": {
