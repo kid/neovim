@@ -28,6 +28,10 @@
         inputs.treefmt-nix.flakeModule
       ];
 
+      flake.overlays.default = _: prev: {
+        my-neovim = inputs.self.packages.${prev.stdenv.hostPlatform.system}.neovim;
+      };
+
       systems = import systems;
 
       perSystem =
