@@ -70,7 +70,7 @@ in
         friendly-snippets
         fyler-nvim
         gitsigns-nvim
-        gruvbox-nvim
+        gruvbox-material
         helm-ls-nvim
         lazydev-nvim
         lspkind-nvim
