@@ -4,20 +4,10 @@ return {
   { "mini.icons" },
   { "nui.nvim" },
   {
-    "gruvbox.nvim",
+    "gruvbox-material",
     after = function()
-      require("gruvbox").setup({
-        overrides = {
-          SignColumn = { bg = "none" },
-          CursorLineNr = { bg = "none" },
-          CursorLineSign = { bg = "none" },
-          DiagnosticSignError = { bg = "none" },
-          DiagnosticSignWarn = { bg = "none" },
-          DiagnosticSignInfo = { bg = "none" },
-          DiagnosticSignHint = { bg = "none" },
-        },
-      })
-      vim.cmd("colorscheme gruvbox")
+      vim.g.gruvbox_material_foreground = "original"
+      vim.cmd("colorscheme gruvbox-material")
     end,
   },
   {

@@ -1,12 +1,4 @@
 --- @module "lze"
-
---- @param group string
---- @return string|nil
-local function fg(group)
-  local hl = vim.api.nvim_get_hl(0, { name = group, link = false })
-  return hl.fg and string.format("#%06x", hl.fg) or nil
-end
-
 --- @type lze.PluginSpec[]
 return {
   {
@@ -42,11 +34,6 @@ return {
     after = function()
       require("neogit").setup({
         disable_signs = true,
-        -- Since v3, neogit derives its whole red palette from ErrorMsg's
-        -- foreground. gruvbox styles ErrorMsg as dark-text-on-red, so that
-        -- foreground is near-black and deletions render unreadable. Error's
-        -- foreground is the actual red, and is what neogit used before v3.
-        highlight = { red = fg("Error") },
         integrations = {
           diffview = true,
           snacks = true,
