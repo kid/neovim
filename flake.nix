@@ -13,12 +13,6 @@
 
     treefmt-nix.url = "github:numtide/treefmt-nix";
     treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
-
-    npins.url = "github:andir/npins";
-    npins.flake = false;
-
-    blink-cmp.url = "github:saghen/blink.cmp/v1.8.0";
-    blink-pairs.url = "github:saghen/blink.pairs/v0.4.1";
   };
 
   outputs =
@@ -45,7 +39,7 @@
           ...
         }:
         let
-          inherit (inputs) mnw npins;
+          inherit (inputs) mnw;
         in
         {
           _module.args.pkgs = import inputs.nixpkgs {
@@ -72,33 +66,19 @@
 
             dev = self'.packages.default.devMode;
             inherit (self'.packages.default) configDir;
-
-            npins = (pkgs.callPackage (npins + /npins.nix) { }).overrideAttrs {
-              buildInputs = lib.optional pkgs.stdenv.isDarwin [ pkgs.apple-sdk ];
-            };
           };
 
           devShells.default = pkgs.mkShellNoCC {
             inputsFrom = [ config.treefmt.build.devShell ];
-            packages =
-              with pkgs;
-              [
-                opencode
-                lua-language-server
-                stylua
-                deadnix
-                statix
-              ]
-              ++ [
-                self'.packages.dev
-                self'.packages.npins
-                (pkgs.writeShellScriptBin "start" ''
-                  npins --lock-file ./npins/start.json "$@"
-                '')
-                (pkgs.writeShellScriptBin "opt" ''
-                  npins --lock-file ./npins/opt.json "$@"
-                '')
-              ];
+            packages = with pkgs; [
+              opencode
+              lua-language-server
+              stylua
+              deadnix
+              statix
+
+              self'.packages.dev
+            ];
           };
         };
     });

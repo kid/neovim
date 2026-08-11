@@ -3,7 +3,7 @@
 return {
   { "friendly-snippets", event = "InsertEnter" },
   {
-    "LuaSnip",
+    "luasnip",
     event = "InsertEnter",
     before = function()
       LZE.trigger_load("friendly-snippets")
