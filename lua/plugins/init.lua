@@ -10,7 +10,6 @@ return {
   { import = "plugins.lsp" },
   { import = "plugins.dev" },
   { import = "plugins.formatting" },
-  { import = "plugins.ai" },
   { import = "plugins.markdown" },
   { import = "plugins.misc" },
 }
