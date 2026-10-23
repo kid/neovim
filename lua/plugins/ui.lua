@@ -119,7 +119,9 @@ return {
     event = "DeferredUIEnter",
     after = function()
       require("smart-splits").setup({
-        at_edge = "stop",
+        move = {
+          at_edge = "stop",
+        },
       })
     end,
     keys = {
