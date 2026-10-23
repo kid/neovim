@@ -68,6 +68,22 @@
             inherit (self'.packages.default) configDir;
           };
 
+          checks.startup =
+            pkgs.runCommand "neovim-startup-check"
+              {
+                nativeBuildInputs = [ self'.packages.neovim ];
+              }
+              ''
+                export HOME="$TMPDIR"
+                export NVIM_STARTUP_REPORT="$TMPDIR/report"
+                if ! timeout 120 nvim --headless --cmd "luafile ${./tests/startup.lua}" </dev/null >"$TMPDIR/log" 2>&1; then
+                  echo "neovim startup failed:" >&2
+                  cat "$NVIM_STARTUP_REPORT" >&2 || cat "$TMPDIR/log" >&2
+                  exit 1
+                fi
+                touch "$out"
+              '';
+
           devShells.default = pkgs.mkShellNoCC {
             inputsFrom = [ config.treefmt.build.devShell ];
             packages = with pkgs; [
