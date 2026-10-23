@@ -1,13 +1,4 @@
+// Base config is inherited from kid/renovate-config, which also runs Renovate.
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  extends: [
-    "config:recommended"
-  ],
-  nix: {
-    enabled: true,
-  },
-  lockFileMaintenance: {
-    enabled: true,
-    extends: ["schedule:weekly"],
-  },
 }
