@@ -3,6 +3,8 @@
 return {
   { "mini.icons" },
   { "nui.nvim" },
+  { "smart-splits-backend-ghostty", lazy = true },
+  { "smart-splits-backend-wezterm", lazy = true },
   {
     "gruvbox-material",
     after = function()
@@ -117,10 +119,18 @@ return {
   {
     "smart-splits.nvim",
     event = "DeferredUIEnter",
+    before = function()
+      LZE.trigger_load({ "smart-splits-backend-ghostty", "smart-splits-backend-wezterm" })
+    end,
     after = function()
       require("smart-splits").setup({
         move = {
           at_edge = "stop",
+        },
+        mux = {
+          backend = { "smart-splits-backend-wezterm", "smart-splits-backend-ghostty" },
+          -- running outside both terminals is normal, not a misconfiguration
+          warn_if_unusable = false,
         },
       })
     end,

@@ -13,6 +13,14 @@
 
     treefmt-nix.url = "github:numtide/treefmt-nix";
     treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
+
+    pkgs-by-name-for-flake-parts.url = "github:drupol/pkgs-by-name-for-flake-parts";
+
+    # No releases upstream yet, so track the default branch through flake.lock.
+    smart-splits-backend-wezterm = {
+      url = "github:smart-splits-nvim/backend-wezterm";
+      flake = false;
+    };
   };
 
   outputs =
@@ -20,6 +28,7 @@
     flake-parts.lib.mkFlake { inherit inputs; } (_: {
       imports = [
         inputs.treefmt-nix.flakeModule
+        inputs.pkgs-by-name-for-flake-parts.flakeModule
       ];
 
       flake.overlays.default = _: prev: {
@@ -59,10 +68,19 @@
             };
           };
 
+          pkgsDirectory = ./pkgs/by-name;
+
           packages = {
             default = self'.packages.neovim;
 
-            neovim = mnw.lib.wrap { inherit pkgs inputs inputs'; } ./config.nix;
+            neovim = mnw.lib.wrap {
+              inherit
+                pkgs
+                inputs
+                inputs'
+                self'
+                ;
+            } ./config.nix;
 
             dev = self'.packages.default.devMode;
             inherit (self'.packages.default) configDir;
