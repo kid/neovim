@@ -83,7 +83,6 @@ in
         nvim-lspconfig
         nvim-surround
         nvim-web-devicons
-        opencode-nvim
         quicker-nvim
         render-markdown-nvim
         smart-splits-nvim
@@ -99,9 +98,6 @@ in
     sqlite
     ripgrep
     copilot-language-server
-
-    # for opencode
-    lsof
   ];
 
   extraLuaPackages = ps: [ ps.jsregexp ];

@@ -71,7 +71,6 @@
           devShells.default = pkgs.mkShellNoCC {
             inputsFrom = [ config.treefmt.build.devShell ];
             packages = with pkgs; [
-              opencode
               lua-language-server
               stylua
               deadnix
