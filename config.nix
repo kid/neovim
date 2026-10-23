@@ -2,6 +2,7 @@
   lib,
   pkgs,
   inputs',
+  self',
   ...
 }:
 let
@@ -86,6 +87,8 @@ in
         quicker-nvim
         render-markdown-nvim
         smart-splits-nvim
+        self'.packages.smart-splits-backend-ghostty
+        self'.packages.smart-splits-backend-wezterm
         snacks-nvim
         todo-comments-nvim
         trouble-nvim
