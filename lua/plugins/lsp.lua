@@ -92,7 +92,10 @@ return {
       for _, name in ipairs(servers) do
         local cfg = vim.lsp.config and vim.lsp.config[name]
         local cmd = cfg and cfg.cmd
-        if type(cmd) == "table" and #cmd > 0 then
+        if type(cmd) == "function" then
+          -- Function commands resolve project-local executables at startup.
+          table.insert(enabled, name)
+        elseif type(cmd) == "table" and #cmd > 0 then
           local bin = cmd[1]
           if type(bin) == "string" and vim.fn.executable(bin) == 1 then
             table.insert(enabled, name)
