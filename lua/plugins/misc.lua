@@ -3,7 +3,7 @@
 return {
   {
     "helm-ls.nvim",
-    ft = { "helm" },
+    -- Load eagerly: this plugin provides Helm filetype detection.
     after = function()
       require("helm-ls").setup({})
     end,
