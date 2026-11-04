@@ -86,6 +86,7 @@ return {
         "eslint",
 
         "helm_ls",
+        "dang",
       }
 
       local enabled = {}

@@ -21,6 +21,14 @@
       url = "github:smart-splits-nvim/backend-wezterm";
       flake = false;
     };
+    dang = {
+      url = "github:vito/dang";
+      flake = false;
+    };
+    dang-nvim = {
+      url = "github:vito/dang.nvim";
+      flake = false;
+    };
   };
 
   outputs =
