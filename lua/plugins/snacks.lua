@@ -26,6 +26,9 @@ return {
                 return vim.o.columns >= 120 and "ivy" or "ivy_split"
               end,
             },
+            sources = {
+              files = { hidden = true },
+            },
           },
         }
       )
