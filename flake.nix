@@ -110,6 +110,17 @@
                 touch "$out"
               '';
 
+          checks.dang-queries =
+            pkgs.runCommand "dang-queries-check"
+              {
+                nativeBuildInputs = [ self'.packages.neovim ];
+              }
+              ''
+                export HOME="$TMPDIR"
+                timeout 60 nvim --headless -c "luafile ${./tests/dang-queries.lua}" </dev/null
+                touch "$out"
+              '';
+
           devShells.default = pkgs.mkShellNoCC {
             inputsFrom = [ config.treefmt.build.devShell ];
             packages = with pkgs; [

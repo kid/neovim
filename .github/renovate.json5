@@ -1,4 +1,17 @@
 // Base config is inherited from kid/renovate-config, which also runs Renovate.
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  packageRules: [
+    {
+      // dang's source is a flake input, which only lock file maintenance
+      // bumps, and its vendorHash must follow. refresh-nix-hash hands
+      // pkgs/by-name files to nix-update; the last two arguments are unused.
+      matchUpdateTypes: ["lockFileMaintenance"],
+      postUpgradeTasks: {
+        commands: ["refresh-nix-hash pkgs/by-name/dang/package.nix dang skip"],
+        fileFilters: ["pkgs/by-name/dang/package.nix"],
+        executionMode: "update",
+      },
+    },
+  ],
 }
