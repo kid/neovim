@@ -15,6 +15,11 @@ return {
         integrations = {
           icon = "nvim_web_devicons",
         },
+        ui = {
+          hidden_items = {
+            switches = {},
+          },
+        },
         views = {
           finder = {
             default_explorer = true,
