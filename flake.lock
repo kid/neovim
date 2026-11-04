@@ -1,5 +1,37 @@
 {
   "nodes": {
+    "dang": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793679768,
+        "narHash": "sha256-5FNp7imzcEnqrx+Fo7D5GzlJzCcHmXsiLIcgXdahAv8=",
+        "owner": "vito",
+        "repo": "dang",
+        "rev": "00dc3801b40963aedc3439ba8d636600f0873987",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vito",
+        "repo": "dang",
+        "type": "github"
+      }
+    },
+    "dang-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1783019237,
+        "narHash": "sha256-FEou+bpr2aqys8z1Q6gBACmkpsohIZQB6SoF4lUNk2Q=",
+        "owner": "vito",
+        "repo": "dang.nvim",
+        "rev": "a65213d599cd7646206c3d2e52797d5f4329db04",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vito",
+        "repo": "dang.nvim",
+        "type": "github"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -140,6 +172,8 @@
     },
     "root": {
       "inputs": {
+        "dang": "dang",
+        "dang-nvim": "dang-nvim",
         "flake-parts": "flake-parts",
         "mnw": "mnw",
         "neovim-nightly": "neovim-nightly",

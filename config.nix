@@ -48,6 +48,7 @@ in
         nvim-treesitter
         nvim-treesitter-textobjects
 
+        self'.packages.dang-nvim
         jinja-vim
         lze
         lzextras
@@ -101,6 +102,7 @@ in
     sqlite
     ripgrep
     copilot-language-server
+    self'.packages.dang
   ];
 
   extraLuaPackages = ps: [ ps.jsregexp ];
