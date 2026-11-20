@@ -14,7 +14,7 @@ buildGoModule {
 
   # go-tree-sitter compiles C from include/ and src/, which `go mod vendor` drops.
   proxyVendor = true;
-  vendorHash = "sha256-mFzpZ5mxo1mkUsU7rFkT2u6KI7GQS9cE6lRYH3q5KGI=";
+  vendorHash = "sha256-zZMSbV1PyYuTj5ov4g0HKPwAYApRHnGV63oiyOa+QGU=";
 
   subPackages = [ "cmd/dang" ];
   ldflags = [
