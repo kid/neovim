@@ -9,6 +9,9 @@ jobs:
     permissions:
       contents: read
     strategy:
+      # Each system builds on its own runner: one failing says nothing about
+      # the other, and cancelling it throws away its build.
+      fail-fast: false
       matrix:
         include:
           # The in-cluster runner (kid/home-ops' actions-runner-controller):
