@@ -9,9 +9,15 @@ jobs:
     permissions:
       contents: read
     strategy:
+      # Each system builds on its own runner: one failing says nothing about
+      # the other, and cancelling it throws away its build.
+      fail-fast: false
       matrix:
         include:
-          - runner: ubuntu-latest
+          # The in-cluster runner (kid/home-ops' actions-runner-controller):
+          # Nix is its node's daemon, whose store stays warm between runs.
+          # Never for pull requests from forks, which build on GitHub's.
+          - runner: ${{ github.event.pull_request.head.repo.fork && 'ubuntu-latest' || 'neovim' }}
             system: x86_64-linux
           - runner: macos-latest
             system: aarch64-darwin
@@ -19,20 +25,26 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Install Nix
+        if: matrix.runner != 'neovim'
         uses: DeterminateSystems/nix-installer-action@9383ce2bf08796b65508822f5982f49151badc4e # main
 
-      - uses: cachix/cachix-action@38b082610b782e7e93e209c35fd730d399dee866 # v17
+      - if: matrix.runner != 'neovim'
+        uses: cachix/cachix-action@38b082610b782e7e93e209c35fd730d399dee866 # v17
         with:
           name: kidibox
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
-      - name: Install omnix
-        run: nix profile add nixpkgs#omnix
-
       - name: Run om ci
+        env:
+          CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
         run: |
-          om ci run \
+          nix run nixpkgs#omnix -- ci run \
             --extra-access-tokens ${{ secrets.GITHUB_TOKEN }} \
             --systems "${{ matrix.system }}" \
             --results=$HOME/omci.json \
-            -- --accept-flake-config
+            -- --accept-flake-config > "$RUNNER_TEMP/built"
+          # The in-cluster runner's daemon doesn't trust it with cachix-action's
+          # post-build hook: push the paths om ci built (it prints them).
+          if [ "${{ matrix.runner }}" = neovim ]; then
+            nix run nixpkgs#cachix -- push kidibox < "$RUNNER_TEMP/built"
+          fi
