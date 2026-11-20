@@ -26,7 +26,7 @@ jobs:
 
       - name: Install Nix
         if: matrix.runner != 'neovim'
-        uses: DeterminateSystems/nix-installer-action@9383ce2bf08796b65508822f5982f49151badc4e # main
+        uses: DeterminateSystems/nix-installer-action@2559b44fed7d4fc978e8dd0e379661afb8b73590 # main
 
       - if: matrix.runner != 'neovim'
         uses: cachix/cachix-action@38b082610b782e7e93e209c35fd730d399dee866 # v17
